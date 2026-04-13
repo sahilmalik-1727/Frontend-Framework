@@ -1,0 +1,28 @@
+{
+  "dashboard": {
+    "stats": [
+      { "label": "Unresolved", "value": 60,  "active": false },
+      { "label": "Overdue",    "value": 16,  "active": true  },
+      { "label": "Open",       "value": 43,  "active": false },
+      { "label": "On hold",    "value": 64,  "active": false }
+    ],
+    "performance": [
+      { "label": "Resolved",                    "value": "449"   },
+      { "label": "Received",                    "value": "426"   },
+      { "label": "Average first response time", "value": "33m"   },
+      { "label": "Average response time",       "value": "3h 8m" },
+      { "label": "Resolution within SLA",       "value": "94%"   }
+    ],
+    "tickets": [
+      { "label": "Waiting on Feature Request", "count": 4238 },
+      { "label": "Awaiting Customer Response", "count": 1005 },
+      { "label": "Awaiting Developer Fix",     "count": 914  },
+      { "label": "Pending",                    "count": 281  }
+    ],
+    "tasks": [
+      { "label": "Finish ticket update",      "badge": "URGENT",  "type": "warning",   "done": false },
+      { "label": "Create new ticket example", "badge": "NEW",     "type": "success",   "done": false },
+      { "label": "Update ticket report",      "badge": "DEFAULT", "type": "secondary", "done": true  }
+    ]
+  }
+}

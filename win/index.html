@@ -129,49 +129,8 @@
           <!-- ROW 1 -->
           <!-- from Layout > Grid + Gutters + Spacing       -->
           <!-- i picked this from Layout > Grid > All breakpoints        -->
-          <div class="row g-3 mb-3">
-            <!-- Card 1: Unresolved -->
-            <div class="col-6 col-md-3">
-              <!-- i picked this from Components > Card + Helpers > Shadows + Utilities > Sizing -->
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center py-4">
-                  <!-- i picked this from Utilities > Text -->
-                  <p class="text-muted mb-2 small">Unresolved</p>
-                  <h2 class="fw-bold mb-0 stat-number">60</h2>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2: Overdue -->
-            <div class="col-6 col-md-3">
-              <!-- i picked this from Utilities > Borders + custom CSS -->
-              <div class="card shadow-sm h-100 border-primary active-card">
-                <div class="card-body text-center py-4">
-                  <p class="text-primary mb-2 small fw-medium">Overdue</p>
-                  <h2 class="fw-bold mb-0 text-primary stat-number">16</h2>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 3: Open -->
-            <div class="col-6 col-md-3">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center py-4">
-                  <p class="text-muted mb-2 small">Open</p>
-                  <h2 class="fw-bold mb-0 stat-number">43</h2>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 4: On hold -->
-            <div class="col-6 col-md-3">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center py-4">
-                  <p class="text-muted mb-2 small">On hold</p>
-                  <h2 class="fw-bold mb-0 stat-number">64</h2>
-                </div>
-              </div>
-            </div>
+          <!-- JS fills these 4 cards from content.json using forEach -->
+          <div class="row g-3 mb-3" id="stats-row">
           </div>
 
           <!-- i picked this from Layout > Grid > All breakpoints -->
@@ -223,43 +182,8 @@
             <!-- Stats Panel (right, narrower) -->
             <div class="col-12 col-lg-4">
               <div class="card border-0 shadow-sm h-100">
-                <!-- i picked this from Utilities > Spacing remove padding, control per-row -->
-                <div class="card-body p-0">
-                  <!-- i picked this from Utilities > Flex + Borders + Spacing -->
-                  <div
-                    class="d-flex flex-column align-items-end border-bottom py-3 px-4"
-                  >
-                    <span class="text-muted small mb-1">Resolved</span>
-                    <strong class="fs-4 fw-bold">449</strong>
-                  </div>
-                  <div
-                    class="d-flex flex-column align-items-end border-bottom py-3 px-4"
-                  >
-                    <span class="text-muted small mb-1">Received</span>
-                    <strong class="fs-4 fw-bold">426</strong>
-                  </div>
-                  <div
-                    class="d-flex flex-column align-items-end border-bottom py-3 px-4"
-                  >
-                    <span class="text-muted small mb-1"
-                      >Average first response time</span
-                    >
-                    <strong class="fs-4 fw-bold">33m</strong>
-                  </div>
-                  <div
-                    class="d-flex flex-column align-items-end border-bottom py-3 px-4"
-                  >
-                    <span class="text-muted small mb-1"
-                      >Average response time</span
-                    >
-                    <strong class="fs-4 fw-bold">3h 8m</strong>
-                  </div>
-                  <div class="d-flex flex-column align-items-end py-3 px-4">
-                    <span class="text-muted small mb-1"
-                      >Resolution within SLA</span
-                    >
-                    <strong class="fs-4 fw-bold">94%</strong>
-                  </div>
+                <!-- JS fills performance rows from content.json using forEach -->
+                <div class="card-body p-0" id="performance-list">
                 </div>
               </div>
             </div>
@@ -286,33 +210,8 @@
                     Group: Support
                   </p>
 
-                  <!-- Content > Typography semantic ticket list -->
-                  <ul class="list-unstyled mb-0">
-                    <!--i picked this from Utilities > Flex + Borders + Spacing -->
-                    <li
-                      class="d-flex justify-content-between align-items-center py-2 border-bottom"
-                    >
-                      <span class="small">Waiting on Feature Request</span>
-                      <span class="text-muted small fw-semibold">4238</span>
-                    </li>
-                    <li
-                      class="d-flex justify-content-between align-items-center py-2 border-bottom"
-                    >
-                      <span class="small">Awaiting Customer Response</span>
-                      <span class="text-muted small fw-semibold">1005</span>
-                    </li>
-                    <li
-                      class="d-flex justify-content-between align-items-center py-2 border-bottom"
-                    >
-                      <span class="small">Awaiting Developer Fix</span>
-                      <span class="text-muted small fw-semibold">914</span>
-                    </li>
-                    <li
-                      class="d-flex justify-content-between align-items-center py-2"
-                    >
-                      <span class="small">Pending</span>
-                      <span class="text-muted small fw-semibold">281</span>
-                    </li>
+                  <!-- JS fills ticket rows from content.json using forEach -->
+                  <ul class="list-unstyled mb-0" id="tickets-list">
                   </ul>
                 </div>
               </div>
@@ -347,52 +246,8 @@
                     </button>
                   </div>
 
-                  <!-- i picked this from Components > Badge > Pill badges for all 3badges -->
-                  <div
-                    class="d-flex justify-content-between align-items-center py-2 border-bottom"
-                  >
-                    <div class="d-flex align-items-center gap-2">
-                      <!-- from Forms > Checks & radios -->
-                      <input
-                        type="checkbox"
-                        class="form-check-input mt-0 task-check"
-                      />
-                      <span class="small">Finish ticket update</span>
-                    </div>
-                    <span class="badge rounded-pill text-bg-warning px-3"
-                      >URGENT</span
-                    >
-                  </div>
-
-                  <div
-                    class="d-flex justify-content-between align-items-center py-2 border-bottom"
-                  >
-                    <div class="d-flex align-items-center gap-2">
-                      <input
-                        type="checkbox"
-                        class="form-check-input mt-0 task-check"
-                      />
-                      <span class="small">Create new ticket example</span>
-                    </div>
-                    <span class="badge rounded-pill text-bg-success px-3"
-                      >NEW</span
-                    >
-                  </div>
-
-                  <div
-                    class="d-flex justify-content-between align-items-center py-2"
-                  >
-                    <div class="d-flex align-items-center gap-2">
-                      <input
-                        type="checkbox"
-                        class="form-check-input mt-0 task-check"
-                        checked
-                      />
-                      <span class="small text-muted">Update ticket report</span>
-                    </div>
-                    <span class="badge rounded-pill text-bg-secondary px-3"
-                      >DEFAULT</span
-                    >
+                  <!-- JS fills task rows from content.json using forEach -->
+                  <div id="tasks-list">
                   </div>
                 </div>
               </div>
@@ -490,5 +345,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+        <script src="assets/js/main.js"></script>
+
   </body>
 </html>
